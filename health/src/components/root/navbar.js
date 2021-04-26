@@ -1,11 +1,11 @@
 import React from 'react'
 
-function GettingStarted() {
+function navbar() {
     return (
         <div>
-            h1
+            
         </div>
     )
 }
 
-export default GettingStarted
+export default navbar
