@@ -1,4 +1,4 @@
-import {BrowserRouter,Route,Redirect,Switch} from 'react-router-dom'
+import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Main from "./components/root/main"
 function App() {
   return (
