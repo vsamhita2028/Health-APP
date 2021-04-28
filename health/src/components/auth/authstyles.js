@@ -10,6 +10,26 @@ const useStyles = makeStyles((theme) => ({
     link:{
         textDecoration:"none",
         color:"black"
+    },
+    root: {
+      flexGrow: 1,
+    },
+    maincenter:{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height : "80vh"
+    },
+    center : {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "25em"
+    },
+    textstyle:{
+      width: "20em"
     }
+
+
   }));
   export  {useStyles}
