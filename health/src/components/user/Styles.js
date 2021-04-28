@@ -4,7 +4,7 @@ const useStyles = makeStyles((theme)=>({
 
     bg1:{
         height:"100vh",
-        background: 'linear-gradient(45deg, #F1F2B5 30%, #135058 90%)',
+        background: 'linear-gradient(to right, #ece9e6, #ffffff);',
     },
     
 }))

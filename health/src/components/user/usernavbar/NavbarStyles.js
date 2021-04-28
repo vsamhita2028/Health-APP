@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme)=>({
     },
 
     appbar:{
-        boxShadow:"0px 2px 14px 0px rgba(0,0,0,0.75)"
+        // boxShadow:"0px 2px 14px 0px rgba(0,0,0,0.75)"
     },
 
     logotext:{
