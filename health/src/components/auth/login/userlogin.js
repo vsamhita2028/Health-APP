@@ -36,32 +36,24 @@ const UserLogin = () => {
             alert("Invalid Inputs")
      }
     return ( 
-    <Grid
-    container
-    className={classes.maincenter}
-    >
-        <Grid item xs={4} >
-          <Paper >
-              <Box 
-              className={classes.center} 
-              >
+    <Grid container className={classes.maincenter}>
+        <Grid item xs={11} sm={7} md={5} lg={3}> 
+            <Paper className={classes.p}>
                 <Box m="auto">
                     <Typography variant="h4" color="textSecondary" align="center" gutterBottom={true}>Account Login</Typography>
-                <form noValidate autoComplete="off" onSubmit={handelsubmit}>
-                    <Box component="div" mb={2} mt={7}  >
-                        <TextField id="email" name="email" label="Email/Phone Number" variant="outlined" className={classes.textstyle} error={logindets.email.flag} onChange={(e)=>handelchange(e)} helperText={logindets.email.msg} />
-                    </Box>
-                    <Box component="div" mb={2} >
-                        <TextField id="password" name="password" label="Password" variant="outlined" type="password" className={classes.textstyle} error={logindets.password.flag} onChange={(e)=>handelchange(e)} helperText={logindets.password.msg} />
-                    </Box>
-                    <Box component="div" mb={2} >
-                    <Button type="submit" variant="contained" color="primary" fullWidth={true} >SIGN IN</Button>
-                    </Box>
-                </form>
+                    <form noValidate autoComplete="off" onSubmit={handelsubmit}>
+                        <Box component="div" mb={2} mt={7}  >
+                            <TextField id="email" name="email" label="Email/Phone Number" variant="outlined" className={classes.textstyle} error={logindets.email.flag} onChange={(e)=>handelchange(e)} helperText={logindets.email.msg} fullWidth={true} />
+                        </Box>
+                        <Box component="div" mb={2} >
+                            <TextField id="password" name="password" label="Password" variant="outlined" type="password" className={classes.textstyle} error={logindets.password.flag} onChange={(e)=>handelchange(e)} helperText={logindets.password.msg} fullWidth={true} />
+                        </Box>
+                        <Box component="div" mb={2} >
+                        <Button type="submit" variant="contained" color="primary" fullWidth={true} >SIGN IN</Button>
+                        </Box>
+                    </form>
                 </Box>
-                
-              </Box>
-          </Paper>
+            </Paper>
         </Grid>
     </Grid>
 );
