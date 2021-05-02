@@ -1,10 +1,8 @@
-import React from 'react'
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
-import {useStyles} from  "../authstyles";
-import { Box,Paper, Typography} from '@material-ui/core';
-import { Button } from '@material-ui/core';
-import { useState } from 'react';
+import React,{useState} from 'react'
+import {Link} from 'react-router-dom'
+import { Box,Paper, Typography, Button ,Grid , TextField} from '@material-ui/core';
+import {useStyles} from './SignupStyles'
+
 const Usersignup=()=> {
     const classes = useStyles();
     const[logindets, setLoginDets] = useState(
@@ -60,29 +58,85 @@ const Usersignup=()=> {
     return ( 
         <Grid container className={classes.maincenter}>
             <Grid item xs={11} sm={7} md={6} lg={4}> 
-                <Paper className={classes.p}>
-                    <Box m="auto">
-                        <Typography variant="h4" color="textSecondary" align="center" gutterBottom={true}>User Signup</Typography>
+                <Paper elevation={4}>
+                    <Box p={4}>
+                        <Typography variant="h4" align="center" gutterBottom={true}>USER SIGNUP</Typography>
                         <form noValidate autoComplete="off" onSubmit={handelsubmit}>
-                            <Box component="div" mb={2} mt={7}  >
-                                <TextField id="firstname" name="firstname" label="First Name" variant="outlined" className={classes.textstyle} error={logindets.firstname.flag} onChange={(e)=>handelchange(e)} helperText={logindets.firstname.msg} fullWidth={true} />
+                            <Box component="div" mb={2} mt={4}>
+                                <TextField id="firstname" 
+                                size="small" 
+                                name="firstname" 
+                                label="First Name" 
+                                variant="outlined" 
+                                className={classes.textstyle} 
+                                error={logindets.firstname.flag} 
+                                onChange={(e)=>handelchange(e)} helperText={logindets.firstname.msg}/>
                             </Box>
                             <Box component="div" mb={2}>
-                                <TextField id="lastname" name="lastname" label="Last Name" variant="outlined" className={classes.textstyle} error={logindets.lastname.flag} onChange={(e)=>handelchange(e)} helperText={logindets.lastname.msg} fullWidth={true} />
+                                <TextField 
+                                id="lastname" 
+                                size="small" 
+                                name="lastname" 
+                                label="Last Name" 
+                                variant="outlined" 
+                                className={classes.textstyle} 
+                                error={logindets.lastname.flag} 
+                                onChange={(e)=>handelchange(e)} 
+                                helperText={logindets.lastname.msg} />
                             </Box>
-                            <Box component="div" mb={2} >
-                                <TextField id="email" name="email" label="Email/Phone Number" variant="outlined" className={classes.textstyle} error={logindets.email.flag} onChange={(e)=>handelchange(e)} helperText={logindets.email.msg} fullWidth={true} />
+                            <Box component="div" mb={2}>
+                                <TextField id="email" 
+                                size="small" 
+                                name="email" 
+                                label="Email/Phone Number" 
+                                variant="outlined" 
+                                className={classes.textstyle} 
+                                error={logindets.email.flag} 
+                                onChange={(e)=>handelchange(e)} 
+                                helperText={logindets.email.msg} 
+                                 />
                             </Box>
-                            <Box component="div" mb={2} >
-                                <TextField id="password" name="password" label="Password" variant="outlined" type="password" className={classes.textstyle} error={logindets.password.flag} onChange={(e)=>handelchange(e)} helperText={logindets.password.msg} fullWidth={true} />
+                            <Box component="div" mb={2}>
+                                <TextField id="password" 
+                                size="small" 
+                                name="password" 
+                                label="Password" 
+                                variant="outlined" 
+                                type="password" 
+                                className={classes.textstyle} 
+                                error={logindets.password.flag} 
+                                onChange={(e)=>handelchange(e)} 
+                                helperText={logindets.password.msg} 
+                                fullWidth={true} />
                             </Box>
-                            <Box component="div" mb={2} >
-                                <TextField id="confirmpwd" name="confirmpwd" label="Confirm Password" variant="outlined" type="password" className={classes.textstyle} error={logindets.confirmpwd.flag} onChange={(e)=>handelchange(e)} helperText={logindets.confirmpwd.msg} fullWidth={true} />
+                            <Box component="div" mb={2}>
+                                <TextField id="confirmpwd" 
+                                size="small" 
+                                name="confirmpwd" 
+                                label="Confirm Password" 
+                                variant="outlined" 
+                                type="password" 
+                                className={classes.textstyle} 
+                                error={logindets.confirmpwd.flag} 
+                                onChange={(e)=>handelchange(e)} 
+                                helperText={logindets.confirmpwd.msg}
+                                fullWidth
+                                />
                             </Box>
-                            <Box component="div" mb={2} >
-                            <Button type="submit" variant="contained" color="primary" fullWidth={true} >SIGN IN</Button>
+                            <Box component="div" mb={2} textAlign="center">
+                            <Button 
+                            type="submit" 
+                            variant="outlined" 
+                            color="primary" 
+                            className={classes.btn}
+                            >SIGN IN</Button>
                             </Box>
                         </form>
+                        <div align="center">
+                            <small>Not a user?
+                                <Link to="/auth/adminsignup" className={classes.link}>click here</Link>
+                            </small>
+                        </div>
                     </Box>
                 </Paper>
             </Grid>

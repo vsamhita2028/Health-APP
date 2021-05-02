@@ -7,10 +7,7 @@ const useStyles = makeStyles((theme) => ({
         marginRight : "1.5em",
     },
 
-    link:{
-        textDecoration:"none",
-        color:"black"
-    },
+
     root: {
       flexGrow: 1,
     },
@@ -31,8 +28,11 @@ const useStyles = makeStyles((theme) => ({
     },
     textstyle:{
       width: "20em"
+    },
+    btn:{
+      borderRadius:20,
+      width:"50%"
     }
-
 
   }));
   export  {useStyles}
