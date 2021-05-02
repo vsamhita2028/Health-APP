@@ -1,6 +1,5 @@
 import React from 'react'
 import {AppBar, IconButton, Typography, Toolbar, Avatar,Box,Paper, MenuItem} from '@material-ui/core'
-import {Menu} from '@material-ui/icons'
 import {useStyles} from './NavbarStyles'
 import {Link} from 'react-router-dom'
 function Navbar() {
