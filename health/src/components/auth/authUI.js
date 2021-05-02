@@ -4,6 +4,7 @@ import AuthNavbar from './authnavbar/AuthNavbar'
 import Adminsignup from './signup/adminsignup'
 import Usersignup from './signup/usersignup'
 import UserLogin from "./login/userlogin"
+import AdminLogin from "./login/adminlogin"
 import {useStyles} from './Styles'
 
 function AuthUI() {
@@ -16,7 +17,7 @@ function AuthUI() {
             <Route exact path={`${url}/usersignup`} component={Usersignup}/>
             <Route exact path={`${url}/adminsignup`} component={Adminsignup}/>
             <Route exact path={`${url}/userlogin`} component={UserLogin}/>
-            <Route exact path={`${url}/adminlogin`} component={UserLogin}/>
+            <Route exact path={`${url}/adminlogin`} component={AdminLogin}/>
             {/* extra routes related to login or signup come here */}
             <Redirect to="/" />
         </Switch>

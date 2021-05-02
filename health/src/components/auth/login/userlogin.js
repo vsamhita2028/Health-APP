@@ -1,10 +1,7 @@
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
-import {useStyles} from  "../authstyles";
-import { Box,Paper, Typography} from '@material-ui/core';
-import { Button } from '@material-ui/core';
-import { useState } from 'react';
+import React,{ useState }  from 'react';
+import {useStyles} from  "./LoginStyles";
+import { Box,Paper,Button, Typography,Grid,TextField} from '@material-ui/core';
+import {Link} from 'react-router-dom'
 const UserLogin = () => {
     const classes = useStyles();
     const[logindets, setLoginDets] = useState(
@@ -38,20 +35,53 @@ const UserLogin = () => {
     return ( 
     <Grid container className={classes.maincenter}>
         <Grid item xs={11} sm={7} md={6} lg={4}> 
-            <Paper className={classes.p}>
-                <Box m="auto">
-                    <Typography variant="h4" color="textSecondary" align="center" gutterBottom={true}>Account Login</Typography>
+            <Paper elevation={4}>
+                <Box p={4}>
+                    <Typography variant="h4" align="center" gutterBottom={true}>USER LOGIN</Typography>
                     <form noValidate autoComplete="off" onSubmit={handelsubmit}>
                         <Box component="div" mb={2} mt={7}  >
-                            <TextField id="email" name="email" label="Email/Phone Number" variant="outlined" className={classes.textstyle} error={logindets.email.flag} onChange={(e)=>handelchange(e)} helperText={logindets.email.msg} fullWidth={true} />
+                            <TextField 
+                            size="small"
+                            id="email" 
+                            name="email" 
+                            label="Email/Phone Number" 
+                            variant="outlined" 
+                            className={classes.textstyle} 
+                            error={logindets.email.flag} 
+                            onChange={(e)=>handelchange(e)} 
+                            helperText={logindets.email.msg}
+                            />
                         </Box>
-                        <Box component="div" mb={2} >
-                            <TextField id="password" name="password" label="Password" variant="outlined" type="password" className={classes.textstyle} error={logindets.password.flag} onChange={(e)=>handelchange(e)} helperText={logindets.password.msg} fullWidth={true} />
+                        <Box component="div" mb={2}>
+                            <TextField 
+                            size="small"
+                            id="password" 
+                            name="password" 
+                            label="Password" 
+                            variant="outlined" 
+                            type="password" 
+                            className={classes.textstyle} 
+                            error={logindets.password.flag} 
+                            onChange={(e)=>handelchange(e)} 
+                            helperText={logindets.password.msg} 
+                            />
                         </Box>
-                        <Box component="div" mb={2} >
-                        <Button type="submit" variant="contained" color="primary" fullWidth={true} >SIGN IN</Button>
+                        <Box component="div" mb={2} align="center">
+                        <Button
+                        size="large"
+                        type="submit" 
+                        variant="outlined" 
+                        color="primary" 
+                        className={classes.btn}>
+                            LOGIN
+                        </Button>
                         </Box>
                     </form>
+                    <div align="center">
+                        <small>Not a user?
+                            <Link to="/auth/adminlogin" className={classes.link}>click here</Link>
+                        </small>
+                    </div>
                 </Box>
             </Paper>
         </Grid>
