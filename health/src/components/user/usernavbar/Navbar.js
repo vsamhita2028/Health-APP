@@ -1,13 +1,13 @@
 import React from 'react'
-import {AppBar, IconButton, Typography, Toolbar, Avatar,Box,Paper, MenuItem} from '@material-ui/core'
+import {AppBar, Divider, Typography, Toolbar, Avatar,Box,Paper, MenuItem} from '@material-ui/core'
 import {Menu} from '@material-ui/icons'
 import {useStyles} from './NavbarStyles'
 import {Link} from 'react-router-dom'
 function Navbar() {
     const classes=useStyles()
     return (
-        <Box p={1} >
-            <AppBar position="sticky" color="inherit" elevation={5} className={classes.appbar}>
+        <Box p={1}>
+            <AppBar color="inherit" elevation={5} className={classes.appbar} position="sticky">
                 <Toolbar>                    
                     <Paper elevation={4} className={classes.logo}>
                         <Box p={1}>
@@ -26,10 +26,9 @@ function Navbar() {
 
 
                     {/* USERNAME and AVATAR */}
-                    <Box mr={2}><Typography className={classes.user}>Baymax</Typography></Box>
                     <Avatar
                     src="/beymax.jpg" 
-                    className={classes.shadow}
+                    className={classes.avatar}
                     />
                 </Toolbar>
             </AppBar>

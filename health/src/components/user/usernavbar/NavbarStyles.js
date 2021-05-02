@@ -5,8 +5,12 @@ const useStyles = makeStyles((theme)=>({
         flexGrow:1,
     },
 
-    shadow:{
-        boxShadow:"0px 0px 4px 1px rgba(0,0,0,0.75)"
+    avatar:{
+        boxShadow:"0px 0px 4px 1px rgba(0,0,0,0.75)",
+        marginLeft:"20px",
+        '&:hover': {
+            boxShadow:"0px 0px 4px 1px rgba(0,0,0,0.75)"
+        },
     },
 
     logo:{
@@ -16,6 +20,10 @@ const useStyles = makeStyles((theme)=>({
 
     appbar:{
         // boxShadow:"0px 2px 14px 0px rgba(0,0,0,0.75)"
+        // background: 'linear-gradient(to left, #076585, #fff);',
+        // top:"10px",
+        // left:"7px",
+        // width:"99%",
     },
 
     logotext:{
