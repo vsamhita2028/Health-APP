@@ -59,7 +59,7 @@ function Adminsignup() {
             <Grid item xs={11} sm={7} md={6} lg={4}> 
                 <Paper elevation={4}>
                     <Box p={4}>
-                        <Typography variant="h4" align="center" gutterBottom={true}>USER SIGNUP</Typography>
+                        <Typography variant="h4" align="center" gutterBottom={true}>ADMIN SIGNUP</Typography>
                         <form noValidate autoComplete="off" onSubmit={handelsubmit}>
                             <Box component="div" mb={2} mt={4}>
                                 <TextField 
