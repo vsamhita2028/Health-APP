@@ -59,7 +59,7 @@ const Usersignup=()=> {
      }
     return ( 
         <Grid container className={classes.maincenter}>
-            <Grid item xs={11} sm={7} md={5} lg={3}> 
+            <Grid item xs={11} sm={7} md={6} lg={4}> 
                 <Paper className={classes.p}>
                     <Box m="auto">
                         <Typography variant="h4" color="textSecondary" align="center" gutterBottom={true}>User Signup</Typography>
