@@ -14,11 +14,14 @@ const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
     },
+    p:{
+      padding: "2em"  
+    },
     maincenter:{
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      height : "80vh"
+      height : "80vh",
     },
     center : {
       display: "flex",

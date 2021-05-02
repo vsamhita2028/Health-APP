@@ -12,7 +12,7 @@ function Navbar() {
             <AppBar position="static" color="transparent" elevation={0}>
                 <Toolbar>
                     <Typography variant="h6" className={classes.title}>
-                    <h3>MedBay</h3>
+                        MedBay
                     </Typography>
                     <Link to="/" className={classes.link}><Button color="inherit" className={classes.btn}>About</Button></Link>
                     <Link to="/auth/userlogin" className={classes.link}><Button color="inherit" className={classes.btn}>Login</Button></Link>
